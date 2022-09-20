@@ -1,15 +1,29 @@
-#define _CRT_SECURE_NO_WARNINGS 1
-//scanfº¯Êı
-#include<stdio.h>
+//å†’æ³¡æ’åº
+#include <stdio.h>
 int main()
-{
-	int a = 0;
-	int b = 0;
-	int sum = a + b;
-	printf("ÇëÊäÈëÁ½¸öÖµ:");
-	scanf("%d %d", &a, &b);
-	sum = a + b;
-	printf("%d\n", sum);
-	return 0;
+{   
+    int i,j,t,arr[10];
+    printf("è¯·è¾“å…¥æ¯”è¾ƒæ•°å­—(å†’æ³¡æ’åº):");
+    for(int i=0;i<10;i++)
+    scanf("%d",&arr[i]);//æ•°ç»„å¾ªç¯è¾“å…¥
+    for(int i=0;i<9;i++)
+    {
+        for(int j=0;j<9-i;j++)
+        {
+            if(arr[j]<arr[j+1])
+            {
+            int t=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=t;
+            }
+        }
+    }        
+        
+        for(int i=0;i<10;i++)
+        {
+            printf("%d",arr[i]);
+            printf("\n");
+        }   
 
+    return 0;
 }
